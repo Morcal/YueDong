@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+    <dimen name="player_disc_size">153dp</dimen>
+    <dimen name="player_disc_container_marign">25dp</dimen>
+
+</resources>
