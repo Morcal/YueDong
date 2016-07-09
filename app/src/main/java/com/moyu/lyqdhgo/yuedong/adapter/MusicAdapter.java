@@ -77,7 +77,5 @@ public class MusicAdapter extends RecyclerView.Adapter<MusicAdapter.MyViewHolder
     public interface OnRecycleViewItemClickListener {
         void onItemClick(View view, Media media);
     }
-    public interface OnItemClickListener {
-        public void onItemClick(View view,int postion);
-    }
+
 }

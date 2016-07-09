@@ -97,11 +97,11 @@ public class MainActivity extends AppCompatActivity
     }
 
     @Override
-    public void onMusicSelected(Media media,List<Media> list) {
+    public void onMusicSelected(Media media, List<Media> list, int position) {
         // replace musicListFragment to musicPlayFragment
         FragmentManager fm = getSupportFragmentManager();
         FragmentTransaction transaction = fm.beginTransaction();
-        MusicPlayFragment musicPlay = MusicPlayFragment.newInstance(media);
+        MusicPlayFragment musicPlay = MusicPlayFragment.newInstance( media, list, position);
         transaction.replace(R.id.content, musicPlay);
         transaction.addToBackStack(null);
         transaction.commit();

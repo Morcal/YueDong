@@ -35,6 +35,7 @@ public class MusicListFragment extends Fragment {
     @Bind(R.id.list_music)
     RecyclerView recyclerView;
 
+    private int curPosition;
     private MusicAdapter adapter;
     private List<Media> mediaData = new ArrayList<>();
     OnHeadlineSelectedListener callBack;
@@ -122,13 +123,19 @@ public class MusicListFragment extends Fragment {
                 String name = media.getName();
                 String path = media.getDataStr();
                 Log.i(TAG, "name->" + name + "path->" + path);
-                callBack.onMusicSelected(media, mediaData);
+                for (Media me : mediaData) {
+                    if (path.equals(me.getDataStr())) {
+                        curPosition=mediaData.indexOf(me);
+                        Log.i(TAG, "position->" + curPosition);
+                    }
+                }
+                callBack.onMusicSelected(media, mediaData,curPosition);
             }
         });
     }
 
     // callback data for activity
     public interface OnHeadlineSelectedListener {
-        void onMusicSelected(Media media, List<Media> list);
+        void onMusicSelected(Media media, List<Media> list,int position);
     }
 }
