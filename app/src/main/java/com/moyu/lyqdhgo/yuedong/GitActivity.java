@@ -23,4 +23,8 @@ public class GitActivity extends AppCompatActivity {
     private void test2(){
         System.out.print("qdh create mothod")
     }
+  
+    private void test3(){
+        System.out.print("qdh master create mothod")
+    }
 }
