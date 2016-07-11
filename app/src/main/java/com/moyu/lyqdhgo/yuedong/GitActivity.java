@@ -20,4 +20,7 @@ public class GitActivity extends AppCompatActivity {
         System.out.print("Git first commit");
     }
 
+    private void test2(){
+        System.out.print("qdh create mothod")
+    }
 }
