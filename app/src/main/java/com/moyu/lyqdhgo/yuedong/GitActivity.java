@@ -27,4 +27,8 @@ public class GitActivity extends AppCompatActivity {
     private void test3(){
         System.out.print("qdh master create mothod")
     }
+    
+    private void test4(){
+	System.out.print("GitTest2 in branch devTest create test4 method")
+    }
 }
